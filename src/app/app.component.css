@@ -1,0 +1,66 @@
+html,body{
+    background: #CCCCCC;
+}
+.listBox{
+    margin-top: 20px;
+}
+.badge{
+    background: #CC0000;
+    color: #ffffff;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 16px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.card{
+    margin-bottom: 10px;
+}
+.dorwnArrow{
+    cursor: pointer;
+    background: none;
+    border: 0;
+    float: right;
+    height: 12px;
+    position: relative;
+    width: 12px;
+    transition: all 0.4s ease;
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.dorwnArrow::after {
+    margin-top: 10px;
+    border-bottom-style: solid;    
+    border-bottom-width: 2px;    
+    border-right-style: solid;    
+    border-right-width: 2px;    
+    content: '';    
+    display: inline-block;    
+    height: 12px;    
+    left: 0;    
+    position: absolute;    
+    top: 0;    
+    width: 12px;    
+}
+.dorwnArrow.open::after{
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.filter{
+    margin-bottom: 15px;
+}
+.filter label{
+    font-size: 13px;
+    margin-top: 5px;
+}
+.filter .form-control{
+    font-size: 13px;
+}
+.hide-section{
+    display: none;
+}

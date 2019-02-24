@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+
+  <div class="row" *ngIf="!isLoaded">
+    <div class="col-12 listBox">
+        <div class="row filter">
+            <label class="col-12 col-md-1 offset-md-9 text-right">
+                  Sort By :
+            </label>
+            <div class="col-12 col-md-2">
+                  <select class="form-control" (change)="chnageFilter($event)">
+                    <option value="-1" selected>Select</option>
+                    <option>Name</option>
+                    <option>City</option>
+                  </select>
+            </div>
+          </div>
+          <div class="card" *ngFor="let user of userLists; let i = index;">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-md-6">
+                    <h5><span class="badge">{{i+1}}</span> {{user.name}}</h5>
+                </div>
+                <div class="col-md-4">
+                  <span>From</span>
+                  <h6>{{user.address.city}}</h6>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="dorwnArrow"
+                    (click)="expandSection(i, $event)">
+                    </button>
+                </div>
+              </div>
+                    
+            </div>
+            <div class="card-body hide-section">
+              <ng-template datacontainer></ng-template>
+            </div>
+             
+          </div>
+    </div>    
+  </div>      
+  
+
+</div>
+
+
