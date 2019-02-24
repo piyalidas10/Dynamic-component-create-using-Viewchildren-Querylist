@@ -70,13 +70,10 @@ export class AppComponent implements AfterViewInit {
       myRef.instance['data'] = this.userLists[index];
       myRef.changeDetectorRef.detectChanges();
     }
-
-    // this.sendData.emit(true);
   }
 
   public closeComponent(index) {
-    // this.entry[index].ViewContainerRef.remove();
-    // this.sendData.emit(true);
+    this.entry[index].ViewContainerRef.remove();
   }
 
   public expandSection(index, evt) {
@@ -91,7 +88,7 @@ export class AppComponent implements AfterViewInit {
     } else {
       expandElement.classList.add('hide-section');
       evt.target.classList.remove('open');
-      // this.closeComponent(index);
+      this.closeComponent(index);
     }
   }
 
